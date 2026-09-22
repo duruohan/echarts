@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- 这里就是引入echarts的代码 -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@6/dist/echarts.min.js"></script>
+</head>
+<body>
+  <!-- 图表容器，宽高必须写 -->
+  <div id="chart" style="width:700px;height:450px;"></div>
+
+  <script>
+    // 初始化图表
+    const myChart = echarts.init(document.getElementById('chart'));
+    const option = {
+      title:{text:'ECharts测试柱状图'},
+      xAxis: {type: 'category', data:['周一','周二','周三','周四']},
+      yAxis: {type:'value'},
+      series:[{type:'bar', data:[12,25,18,30]}]
+    };
+    myChart.setOption(option);
+  </script>
+</body>
+</html>
